@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studio Las - Trener Personalny i Medyczny. Specjalizacja w fizjoterapii sportowej, treningu personalnym i rehabilitacji. Oficer WP, magister AWF.">
+    <meta name="keywords" content="trener personalny Warszawa, trener medyczny, fizjoterapia sportowa, Studio Las, rehabilitacja">
+    <meta name="author" content="Damian Krawiec">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Studio Las - Trener Personalny & Medyczny">
+    <meta property="og:description" content="Kompleksowe podejście do zdrowia i kondycji. Oficer WP, magister AWF, specjalista fizjoterapii w sporcie.">
+    <meta property="og:image" content="img/studio-exterior.jpg">
+    <meta property="og:url" content="https://trenermedycznywarszawa.github.io/forestfitstudio/">
+    
+    <title>Studio Las Wilanów | Trener Personalny & Medyczny Warszawa</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- ============================================ -->
+    <!-- NAVIGATION BAR -->
+    <!-- ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <a href="#home" class="logo">
+                    <i class="fas fa-tree"></i>
+                    <span class="logo-text">Studio <strong>Las</strong></span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Start</a></li>
+                    <li><a href="#about" class="nav-link">O mnie</a></li>
+                    <li><a href="#services" class="nav-link">Usługi</a></li>
+                    <li><a href="#process" class="nav-link">Jak to działa</a></li>
+                    <li><a href="#pricing" class="nav-link">Cennik</a></li>
+                    <li><a href="#testimonials" class="nav-link">Opinie</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                </ul>
+                
+                <!-- CTA Button -->
+                <a href="#contact" class="btn btn-primary nav-cta">
+                    <i class="fas fa-calendar-check"></i>
+                    Umów konsultację
+                </a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION -->
+    <!-- ============================================ -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <img src="img/studio-exterior.jpg" alt="Studio Las" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                
+                <!-- Badge -->
+                <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+                    <i class="fas fa-award"></i>
+                    <span>Magister AWF • Oficer WP • Specjalista Fizjoterapii w Sporcie</span>
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+                    Ból kręgosłupa, który <span class="highlight">wraca co jakiś czas?</span>
+                </h1>
+                
+                <!-- Subheading -->
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    Nie musisz z tym żyć. W Studio Las łączę <strong>medycynę wojskową</strong>, 
+                    <strong>fizjoterapię sportową</strong> i <strong>trening personalny</strong> 
+                    w kompleksowy program, który <strong>eliminuje przyczynę</strong> – nie tylko objaw.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-check"></i>
+                        Umów DARMOWĄ konsultację
+                    </a>
+                    <a href="#about" class="btn btn-secondary btn-large">
+                        <i class="fas fa-user-md"></i>
+                        Poznaj mnie
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="hero-trust" data-aos="fade-up" data-aos-delay="600">
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Pierwsze spotkanie bez zobowiązań</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Gwarancja satysfakcji</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="hero-stats">
+            <div class="container">
+                <div class="stats-wrapper">
+                    
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="700">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number"><span class="counter" data-target="200">0</span>+</h3>
+                            <p class="stat-label">Klientów przeszkolonych</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="800">
+                        <div class="stat-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number"><span class="counter" data-target="95">0</span>%</h3>
+                            <p class="stat-label">Klientów bez bólu po 8 tygodniach</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="900">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">4.9<span class="stat-decimal">/5</span></h3>
+                            <p class="stat-label">Średnia ocena (Google Reviews)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number"><span class="counter" data-target="15">0</span>+</h3>
+                            <p class="stat-label">Lat doświadczenia w sporcie</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1100">
+            <a href="#about" class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ABOUT SECTION -->
+    <!-- ============================================ -->
+    <section class="about" id="about">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Poznaj swojego trenera</span>
+                <h2 class="section-title">Oficer, Trener, Specjalista</h2>
+                <p class="section-description">
+                    Nie jestem zwykłym trenerem personalnym. Łączę doświadczenie wojskowe, 
+                    wiedzę medyczną i pasję do sportu w kompleksowe podejście do zdrowia.
+                </p>
+            </div>
+            
+            <!-- About Content -->
+            <div class="about-content">
+                
+                <!-- About Image -->
+                <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+                    <img src="img/damian-about.jpg" alt="Damian Krawiec - Trener Personalny i Medyczny">
+                    <div class="about-image-badge">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <strong>15+</strong>
+                            <span>Lat doświadczenia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- About Text -->
+                <div class="about-text" data-aos="fade-left" data-aos-delay="300">
+                    
+                    <h3>Damian Krawiec</h3>
+                    <p class="about-intro">
+                        Absolwent <strong>Akademii Wychowania Fizycznego Józefa Piłsudskiego</strong> (magister), 
+                        <strong>Wyższej Szkoły Oficerskiej Wojsk Lądowych</strong> i 
+                        <strong>studiów podyplomowych z Fizjoterapii w Sporcie</strong>.
+                    </p>
+                    
+                    <!-- Qualifications -->
+                    <div class="qualifications">
+                        
+                        <div class="qualification-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="qualification-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="qualification-content">
+                                <h4>Wykształcenie</h4>
+                                <p>Magister AWF + Specjalista Fizjoterapii w Sporcie + Licencjat Zarządzania</p>
+                            </div>
+                        </div>
+                        
+                        <div class="qualification-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="qualification-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="qualification-content">
+                                <h4>Wojsko Polskie</h4>
+                                <p>Oficer, współpraca z Wojskowym Instytutem Medycznym</p>
+                            </div>
+                        </div>
+                        
+                        <div class="qualification-item" data-aos="fade-up" data-aos-delay="600">
+                            <div class="qualification-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="qualification-content">
+                                <h4>Doświadczenie</h4>
+                                <p>200+ klientów, 95% skuteczności w eliminacji bólu</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Approach -->
+                    <div class="about-approach" data-aos="fade-up" data-aos-delay="700">
+                        <h4>Moje podejście</h4>
+                        <p>
+                            <strong>Nie wierzę w szybkie fixes.</strong> Wierzę w kompleksową diagnostykę, 
+                            eliminację przyczyny problemu i budowanie długoterminowego zdrowia. 
+                            Studio Las powstało z frustracji na powierzchowne podejście komercyjnych siłowni.
+                        </p>
+                        <p>
+                            <strong>Tutaj pracuje inaczej.</strong> Każdy klient przechodzi pełną ocenę 
+                            zdrowia, analizę postawy i badanie składu ciała. Dopiero potem układamy 
+                            spersonalizowany program treningowy.
+                        </p>
+                    </div>
+                    
+                    <!-- CTA -->
+                    <div class="about-cta" data-aos="fade-up" data-aos-delay="800">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Umów konsultację
+                        </a>
+                        <a href="#services" class="btn btn-secondary">
+                            <i class="fas fa-list"></i>
+                            Zobacz usługi
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SERVICES SECTION -->
+    <!-- ============================================ -->
+    <section class="services" id="services">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Co oferuję</span>
+                <h2 class="section-title">Kompleksowe Usługi Treningowe</h2>
+                <p class="section-description">
+                    Od diagnostyki przez trening po rehabilitację - wszystko w jednym miejscu.
+                </p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="services-grid">
+                
+                <!-- Service Card 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Trening Personalny</h3>
+                    <p>Spersonalizowane sesje 1-na-1 dostosowane do Twoich celów, możliwości i ograniczeń zdrowotnych.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Pełna diagnostyka przed startem</li>
+                        <li><i class="fas fa-check"></i> Indywidualny plan treningowy</li>
+                        <li><i class="fas fa-check"></i> Monitoring postępów</li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Konsultacje Medyczne</h3>
+                    <p>Profesjonalna analiza zdrowia, postawy i składu ciała z wykorzystaniem sprzętu medycznego Tanita.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Analiza składu ciała</li>
+                        <li><i class="fas fa-check"></i> Ocena postawy</li>
+                        <li><i class="fas fa-check"></i> Plan eliminacji bólu</li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Fizjoterapia Sportowa</h3>
+                    <p>Rehabilitacja urazów, prewencja i powrót do pełnej sprawności z wykorzystaniem metod wojskowych.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Terapia manualna</li>
+                        <li><i class="fas fa-check"></i> Ćwiczenia korekcyjne</li>
+                        <li><i class="fas fa-check"></i> Mobilizacja tkanek</li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Treningi Online</h3>
+                    <p>Sesje wirtualne przez Zoom/Teams z pełnym monitoringiem techniki i postępów treningowych.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Elastyczne godziny</li>
+                        <li><i class="fas fa-check"></i> Trening z dowolnego miejsca</li>
+                        <li><i class="fas fa-check"></i> Nagrania sesji</li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Coaching Żywieniowy</h3>
+                    <p>Spersonalizowane plany dietetyczne wspierające Twoje cele treningowe i zdrowie.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Analiza nawyków żywieniowych</li>
+                        <li><i class="fas fa-check"></i> Indywidualny plan posiłków</li>
+                        <li><i class="fas fa-check"></i> Edukacja żywieniowa</li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Treningi Grupowe</h3>
+                    <p>Małe grupy (max 4 osoby) dla lepszej motywacji i indywidualnej uwagi podczas treningu.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Max 3 osoby</li>
+                        <li><i class="fas fa-check"></i> Indywidualna uwaga</li>
+                        <li><i class="fas fa-check"></i> Lepsza cena</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PROCESS SECTION -->
+    <!-- ============================================ -->
+    <section class="process" id="process">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Jak to działa</span>
+                <h2 class="section-title">3 Kroki Do Lepszego Zdrowia</h2>
+                <p class="section-description">
+                    Prosty, sprawdzony proces oparty na medycynie i nauce o sporcie.
+                </p>
+            </div>
+            
+            <!-- Process Steps -->
+            <div class="process-steps">
+                
+                <!-- Step 1 -->
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">
+                        <span>01</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Konsultacja Diagnostyczna</h3>
+                        <p>
+                            <strong>Bezpłatne 45-minutowe spotkanie</strong>, podczas którego przeprowadzam:
+                        </p>
+                        <ul>
+                            <li>Wywiad zdrowotny i treningowy</li>
+                            <li>Analizę składu ciała (Tanita RD-545)</li>
+                            <li>Ocenę postawy i mobilności</li>
+                            <li>Test funkcjonalny FMS</li>
+                            <li>Ustalenie realistycznych celów</li>
+                        </ul>
+                        <p class="step-result">
+                            <i class="fas fa-arrow-right"></i>
+                            <strong>Efekt:</strong> Dokładnie wiemy co trzeba poprawić i dlaczego.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="process-arrow" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step" data-aos="fade-left" data-aos-delay="300">
+                    <div class="step-number">
+                        <span>02</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h3>Personalizowany Program</h3>
+                        <p>
+                            Tworzę <strong>indywidualny plan treningowy</strong> uwzględniający:
+                        </p>
+                        <ul>
+                            <li>Twoje ograniczenia i kontuzje</li>
+                            <li>Dostępny czas i preferencje</li>
+                            <li>Cele krótko i długoterminowe</li>
+                            <li>Progresję bezpieczną dla ciała</li>
+                            <li>Integrację z życiem codziennym</li>
+                        </ul>
+                        <p class="step-result">
+                            <i class="fas fa-arrow-right"></i>
+                            <strong>Efekt:</strong> Program dopasowany 100% do Ciebie, nie odwrotnie.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="process-arrow" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step" data-aos="fade-right" data-aos-delay="500">
+                    <div class="step-number">
+                        <span>03</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Realizacja i Monitoring</h3>
+                        <p>
+                            <strong>Regularne sesje treningowe</strong> z pełnym wsparciem:
+                        </p>
+                        <ul>
+                            <li>Sesje 2-3x w tygodniu (60 min)</li>
+                            <li>Bieżąca korekta techniki</li>
+                            <li>Comiesięczne pomiary postępów</li>
+                            <li>Modyfikacja programu co 4-6 tygodni</li>
+                            <li>Wsparcie między sesjami (WhatsApp)</li>
+                        </ul>
+                        <p class="step-result">
+                            <i class="fas fa-arrow-right"></i>
+                            <strong>Efekt:</strong> Pierwszy rezultat po 8 tygodniach – gwarantowane.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- CTA -->
+            <div class="process-cta" data-aos="fade-up" data-aos-delay="600">
+                <h3>Gotowy na pierwszą konsultację?</h3>
+                <p>Zarezerwuj bezpłatne spotkanie diagnostyczne - bez zobowiązań.</p>
+                <a href="#contact" class="btn btn-primary btn-large">
+                    <i class="fas fa-calendar-check"></i>
+                    Umów DARMOWĄ konsultację
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PRICING SECTION -->
+    <!-- ============================================ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Cennik</span>
+                <h2 class="section-title">Przejrzyste Pakiety Treningowe</h2>
+                <p class="section-description">
+                    Bez ukrytych kosztów. Wszystkie ceny zawierają pełną diagnostykę i monitoring.
+                </p>
+            </div>
+            
+            <!-- Pricing Cards -->
+            <div class="pricing-grid">
+                
+                <!-- Pricing Card 1 -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p>Dla początkujących</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount">350</span>
+                        <span class="price-currency">zł</span>
+                        <span class="price-period">/sesja</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 1 sesja treningowa (60 min)</li>
+                        <li><i class="fas fa-check"></i> Konsultacja diagnostyczna</li>
+                        <li><i class="fas fa-check"></i> Plan treningowy</li>
+                        <li><i class="fas fa-check"></i> Wsparcie WhatsApp</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Analiza żywienia</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Badanie składu ciała</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Wybierz pakiet</a>
+                </div>
+                
+                <!-- Pricing Card 2 - FEATURED -->
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-badge">Najpopularniejszy</div>
+                    <div class="pricing-header">
+                        <h3>Standard</h3>
+                        <p>Najczęściej wybierany</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount">1200</span>
+                        <span class="price-currency">zł</span>
+                        <span class="price-period">/mies.</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 8 sesji/miesiąc (2x tydzień)</li>
+                        <li><i class="fas fa-check"></i> Pełna diagnostyka medyczna</li>
+                        <li><i class="fas fa-check"></i> Badanie składu ciała (Tanita)</li>
+                        <li><i class="fas fa-check"></i> Indywidualny plan treningowy</li>
+                        <li><i class="fas fa-check"></i> Wsparcie WhatsApp 24/7</li>
+                        <li><i class="fas fa-check"></i> Comiesięczne pomiary</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Wybierz pakiet</a>
+                </div>
+                
+                <!-- Pricing Card 3 -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <p>Maksymalne rezultaty</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount">2200</span>
+                        <span class="price-currency">zł</span>
+                        <span class="price-period">/mies.</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 12 sesji/miesiąc (3x tydzień)</li>
+                        <li><i class="fas fa-check"></i> Pełna diagnostyka + badania</li>
+                        <li><i class="fas fa-check"></i> Indywidualny plan żywieniowy</li>
+                        <li><i class="fas fa-check"></i> Fizjoterapia włączona</li>
+                        <li><i class="fas fa-check"></i> Priorytetowe wsparcie 24/7</li>
+                        <li><i class="fas fa-check"></i> Co-tygodniowe pomiary</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Wybierz pakiet</a>
+                </div>
+                
+            </div>
+            
+            <!-- Pricing Note -->
+            <div class="pricing-note" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>Gwarancja satysfakcji:</strong> Jeśli po 8 tygodniach nie zobaczysz rezultatów - zwracam pieniądze.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TESTIMONIALS SECTION -->
+    <!-- ============================================ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Opinie klientów</span>
+                <h2 class="section-title">Co Mówią Moi Klienci</h2>
+                <p class="section-description">
+                    Prawdziwe historie, prawdziwe rezultaty.
+                </p>
+            </div>
+            
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Przez 3 lata męczyłem się z bólem kręgosłupa. Po 8 tygodniach z Damianem 
+                        - kompletnie zniknął. Profesjonalizm na najwyższym poziomie."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Marcin K.</strong>
+                        <span>Manager, 42 lata</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Wreszcie trener, który rozumie medycynę. Nie tylko trening, ale też fizjoterapia 
+                        i edukacja. Po prostu najlepszy w Warszawie."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Anna W.</strong>
+                        <span>Przedsiębiorca, 35 lat</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Studio Las to moje ulubione miejsce. Trening w lesie, profesjonalny sprzęt 
+                        i Damian który naprawdę dba o rezultaty."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Tomasz P.</strong>
+                        <span>IT Specialist, 28 lat</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACT SECTION -->
+    <!-- ============================================ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Skontaktuj się</span>
+                <h2 class="section-title">Zarezerwuj Darmową Konsultację</h2>
+                <p class="section-description">
+                    Wypełnij formularz przedtreningowy lub zadzwoń - odpowiadam w ciągu 24h.
+                </p>
+            </div>
+            
+            <!-- Contact Content -->
+            <div class="contact-content">
+                
+                <!-- Pre-Training Form Info -->
+                <div class="contact-form-wrapper" data-aos="fade-right" data-aos-delay="100">
+                    <div class="pre-training-form-info">
+                        <div class="form-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Profesjonalny Formularz Przedtreningowy</h3>
+                        <p>
+                            Aby zapewnić Ci <strong>najbezpieczniejszy i najskuteczniejszy trening</strong>, 
+                            proszę o wypełnienie szczegółowego formularza przedtreningowego.
+                        </p>
+                        
+                        <div class="form-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pełna diagnostyka zdrowotna</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Analiza neurotypu treningowego</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Plan dopasowany 100% do Ciebie</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Minimalizacja ryzyka kontuzji</span>
+                            </div>
+                        </div>
+                        
+                        <p class="form-time">
+                            <i class="fas fa-clock"></i>
+                            Wypełnienie zajmuje <strong>15-20 minut</strong>
+                        </p>
+                        
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScMH0fF5ZID6zY5PeC5Wp7xXjTf1VHND4Pert7cbUI7pRWEIQ/viewform" 
+                           target="_blank" 
+                           class="btn btn-primary btn-large">
+                            <i class="fas fa-file-alt"></i>
+                            Wypełnij formularz przedtreningowy
+                        </a>
+                        
+                        <p class="form-privacy">
+                            <i class="fas fa-lock"></i>
+                            Twoje dane są w 100% bezpieczne i poufne (zgodność z RODO)
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info" data-aos="fade-left" data-aos-delay="200">
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Lokalizacja</h4>
+                            <p>Studio Las<br>ul. Pracka 1J<br>05-504 Prace Duże</p>
+                            <a href="https://maps.app.goo.gl/uJc87XBUTM2NjJ5x6" target="_blank" class="map-link">
+                                <i class="fas fa-directions"></i> Otwórz w Mapach Google
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:trenermedycznywarszawa@gmail.com">trenermedycznywarszawa@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Godziny pracy</h4>
+                            <p>Pn-Pt: 16:00 - 22:00<br>Sob: 8:00 - 14:00<br>Nd: Zamknięte</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Certifications Link -->
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Moje Certyfikaty</h4>
+                            <a href="https://sites.google.com/view/trener-personalny-warszawa/referencje" target="_blank" class="map-link">
+                                <i class="fas fa-award"></i> Zobacz referencje i certyfikaty
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="contact-social">
+                        <h4>Śledź mnie</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100063614306951" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#home" class="footer-logo">
+                        <i class="fas fa-tree"></i>
+                        <span>Studio <strong>Las</strong></span>
+                    </a>
+                    <p class="footer-description">
+                        Trener Personalny i Medyczny. Kompleksowe podejście do zdrowia i kondycji.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Szybkie linki</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">O mnie</a></li>
+                        <li><a href="#services">Usługi</a></li>
+                        <li><a href="#pricing">Cennik</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +48 503 975 998</li>
+                        <li><i class="fas fa-envelope"></i> trenermedycznywarszawa@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Studio Las. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
