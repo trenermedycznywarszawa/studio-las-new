@@ -1647,6 +1647,55 @@ img {
     }
 }
 
+/* ============================================ */
+/* MOBILE MENU FIX - Navigation Links */
+/* ============================================ */
+.nav-links {
+    display: none !important;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--color-white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--spacing-2xl) 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.active {
+    display: flex !important;
+    transform: translateX(0) !important;
+}
+
+.nav-links li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: var(--spacing-md) 0;
+}
+
+.nav-links a {
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-md) var(--spacing-xl);
+    display: block;
+    width: 100%;
+    color: var(--color-text);
+}
+
+.nav-links a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+
 /* ============================================
    PRE-TRAINING FORM STYLES
    ============================================ */

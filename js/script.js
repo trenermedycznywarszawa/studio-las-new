@@ -33,39 +33,36 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================================
-// 3. SMOOTH SCROLL FOR NAVIGATION LINKS
+// MOBILE MENU - Fixed Version
 // ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            const headerOffset = 80;
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
+            // Toggle classes
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            
+            console.log('Menu toggled!'); // Debug
+        });
+        
+        // Close menu when clicking on link
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
             });
-            
-            // Close mobile menu if open
-            const mobileMenu = document.getElementById('navMenu');
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const overlay = document.getElementById('mobileMenuOverlay');
-            
-            if (mobileMenu && mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                overlay.classList.remove('active');
-            }
-        }
-    });
+        });
+    }
 });
 
 // ============================================
