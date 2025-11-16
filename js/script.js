@@ -69,35 +69,34 @@ document.addEventListener('DOMContentLoaded', function() {
 // MOBILE MENU - Fixed Version
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');  // ✅ POPRAWIONE
-    const navLinks = document.querySelector('.nav-menu');  // ✅ POPRAWIONE
+    const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
     const body = document.body;
     
-    if (mobileMenuBtn && navLinks) {
+    if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             
             // Toggle classes
             mobileMenuBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
+            navMenu.classList.toggle('active');
             body.classList.toggle('menu-open');
             
             console.log('Menu toggled!'); // Debug
         });
         
         // Close menu when clicking on link
-        const navLinksItems = document.querySelectorAll('.nav-menu a');  // ✅ POPRAWIONE
-        navLinksItems.forEach(link => {
+        const navMenuLinks = document.querySelectorAll('.nav-menu a');
+        navMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
+                navMenu.classList.remove('active');
                 body.classList.remove('menu-open');
             });
         });
     }
 });
-
 
 // ============================================
 // 5. ANIMATED COUNTERS
