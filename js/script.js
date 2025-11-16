@@ -1,7 +1,7 @@
 // ============================================
-// FOREST FIT STUDIO - JAVASCRIPT
-// Created: 2025-11-15
-// Author: Damian Sobczak
+// STUDIO LAS - JAVASCRIPT
+// Created: 2025-11-16
+// Author: Damian Krawiec
 // ============================================
 
 // ============================================
@@ -33,184 +33,174 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================================
-// MOBILE MENU - Fixed Version
+// 3. MOBILE MENU - WORKING VERSION
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-menu');
-    const body = document.body;
-    
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            // Toggle classes
-            mobileMenuBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            body.classList.toggle('menu-open');
-            
-            console.log('Menu toggled!'); // Debug
-        });
-        
-        // Close menu when clicking on link
-        const navLinksItems = document.querySelectorAll('.nav-links a');
-        navLinksItems.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-                body.classList.remove('menu-open');
-            });
-        });
-    }
-});
-
-// ============================================
-// MOBILE MENU - Fixed Version
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const body = document.body;
     
-    if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', function(e) {
+    if (mobileMenuToggle && navMenu) {
+        // Toggle menu
+        mobileMenuToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             
-            // Toggle classes
-            mobileMenuBtn.classList.toggle('active');
+            this.classList.toggle('active');
             navMenu.classList.toggle('active');
             body.classList.toggle('menu-open');
-            
-            console.log('Menu toggled!'); // Debug
         });
         
-        // Close menu when clicking on link
-        const navMenuLinks = document.querySelectorAll('.nav-menu a');
-        navMenuLinks.forEach(link => {
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
                 body.classList.remove('menu-open');
             });
         });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
     }
 });
 
 // ============================================
-// 5. ANIMATED COUNTERS
+// 4. SMOOTH SCROLL FOR ANCHOR LINKS
 // ============================================
-const counters = document.querySelectorAll('.counter');
-
-const animateCounter = (counter) => {
-    const target = parseInt(counter.getAttribute('data-target'));
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-    
-    const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-            counter.textContent = Math.floor(current);
-            requestAnimationFrame(updateCounter);
-        } else {
-            counter.textContent = target;
-        }
-    };
-    
-    updateCounter();
-};
-
-const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
-};
-
-const observerCallback = (entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            observer.unobserve(entry.target);
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#' || href === '') return;
+        
+        e.preventDefault();
+        const target = document.querySelector(href);
+        
+        if (target) {
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
         }
     });
-};
-
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-counters.forEach(counter => {
-    observer.observe(counter);
 });
 
 // ============================================
-// 6. CONTACT FORM SUBMISSION
+// 5. ACCORDION - 3 KROKI (FIXED VERSION)
+// ============================================
+const accordionButtons = document.querySelectorAll('.accordion-btn');
+
+accordionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const accordionItem = this.closest('.accordion-item');
+        const accordionContent = accordionItem.querySelector('.accordion-content');
+        const isActive = accordionItem.classList.contains('active');
+        
+        // Close all accordions
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            item.classList.remove('active');
+            const content = item.querySelector('.accordion-content');
+            content.style.maxHeight = null;
+        });
+        
+        // Open clicked accordion if it wasn't active
+        if (!isActive) {
+            accordionItem.classList.add('active');
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+        }
+    });
+});
+
+// ============================================
+// 6. FORM SUBMISSION (CONTACT FORM)
 // ============================================
 const contactForm = document.getElementById('contactForm');
-
 if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
         
-        // Show loading state
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.innerHTML;
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Wysyłanie...';
-        submitButton.disabled = true;
-        
-        // Simulate form submission (replace with actual backend call)
-        setTimeout(() => {
-            // Success message
-            submitButton.innerHTML = '<i class="fas fa-check"></i> Wysłano!';
-            submitButton.style.background = 'var(--color-success)';
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                submitButton.innerHTML = originalText;
-                submitButton.style.background = '';
-                submitButton.disabled = false;
-            }, 3000);
-            
-            // Show success alert
-            alert('Dziękuję za wiadomość! Odpowiem w ciągu 24 godzin.');
-        }, 1500);
+        console.log('Form Data:', data);
+        alert('Dziękujemy za wiadomość! Skontaktujemy się wkrótce.');
+        this.reset();
     });
 }
 
 // ============================================
-// 7. ACTIVE NAVIGATION LINK ON SCROLL
+// 7. LAZY LOADING IMAGES
 // ============================================
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
-    let current = '';
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach(img => imageObserver.observe(img));
+}
+
+// ============================================
+// 8. COUNTER ANIMATION (STATS SECTION)
+// ============================================
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200;
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const increment = target / speed;
+        let current = 0;
         
-        if (window.pageYOffset >= sectionTop - 100) {
-            current = section.getAttribute('id');
-        }
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = Math.ceil(current) + '+';
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target + '+';
+            }
+        };
+        
+        updateCounter();
     });
+}
+
+// Trigger counter animation on scroll
+const statsSection = document.querySelector('.stats-section');
+if (statsSection) {
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
     
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
+    statsObserver.observe(statsSection);
+}
 
 // ============================================
-// 8. CONSOLE INFO
+// 9. PREVENT HORIZONTAL SCROLL
 // ============================================
-console.log('%c Studio Las - Trener Personalny & Medyczny ', 'background: #2d7a52; color: white; padding: 10px; font-size: 14px; font-weight: bold;');
-console.log('%c Created with ❤️ by Damian Sobczak ', 'color: #2d7a52; font-size: 12px;');
-console.log('%c Website: https://trenermedycznywarszawa.github.io/forestfitstudio/ ', 'color: #666; font-size: 11px;');
+document.body.style.overflowX = 'hidden';
+document.documentElement.style.overflowX = 'hidden';
