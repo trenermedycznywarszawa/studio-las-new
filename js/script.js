@@ -36,8 +36,8 @@ window.addEventListener('scroll', () => {
 // MOBILE MENU - Fixed Version
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-menu');
     const body = document.body;
     
     if (mobileMenuBtn && navLinks) {
@@ -66,29 +66,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// 4. MOBILE MENU TOGGLE
+// MOBILE MENU - Fixed Version
 // ============================================
-const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-const mobileMenu = document.getElementById('navMenu');
-const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');  // ✅ POPRAWIONE
+    const navLinks = document.querySelector('.nav-menu');  // ✅ POPRAWIONE
+    const body = document.body;
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle classes
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            
+            console.log('Menu toggled!'); // Debug
+        });
+        
+        // Close menu when clicking on link
+        const navLinksItems = document.querySelectorAll('.nav-menu a');  // ✅ POPRAWIONE
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+    }
+});
 
-if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', () => {
-        mobileMenuToggle.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        mobileMenuOverlay.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    });
-}
-
-if (mobileMenuOverlay) {
-    mobileMenuOverlay.addEventListener('click', () => {
-        mobileMenuToggle.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-}
 
 // ============================================
 // 5. ANIMATED COUNTERS
